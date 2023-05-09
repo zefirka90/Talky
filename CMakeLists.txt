@@ -5,7 +5,12 @@ include_directories(
     ${CMAKE_INCLUDE_PATH}
 )
 
-add_executable(${PROJECT_NAME} src/main.cpp src/imgui/imgui_impl_glfw.cpp src/imgui/imgui_impl_opengl3.cpp)
+add_executable(${PROJECT_NAME}  src/main.cpp 
+                                src/ChatPanel.cpp  
+                                src/Application.cpp
+                                src/imgui/imgui_impl_glfw.cpp 
+                                src/imgui/imgui_impl_opengl3.cpp
+                                )
 
 find_package(glew REQUIRED)
 find_package(glfw3 REQUIRED)
