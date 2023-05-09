@@ -6,9 +6,10 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 find_package(glew REQUIRED)
 find_package(glfw3 REQUIRED)
+find_package(xorg REQUIRED)
  
 target_link_libraries(${PROJECT_NAME}
-    GLEW::glew_s glfw3
+    GLEW::glew_s glfw3 xorg::xorg
 )
 
 target_link_directories(${PROJECT_NAME} 
