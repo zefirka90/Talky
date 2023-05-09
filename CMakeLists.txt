@@ -26,17 +26,16 @@ target_sources(${PROJECT_NAME} PUBLIC ${HEADERS} PRIVATE ${SOURCES})
 
 find_package(glew REQUIRED)
 find_package(glfw3 REQUIRED)
-find_package(imgui REQUIRED)
+find_package(xorg REQUIRED)
  
 target_link_libraries(${PROJECT_NAME}
-    GLEW::glew_s glfw3 imgui::imgui
-)
-
-target_compile_definitions(${PROJECT_NAME}
-    PUBLIC IMGUI_IMPL_OPENGL_LOADER_GLEW
+    GLEW::glew_s glfw3 xorg::xorg
 )
 
 target_link_directories(${PROJECT_NAME} 
     PRIVATE ${CMAKE_LIBRARY_PATH}
 )
 
+include_directories(
+    ${CMAKE_INCLUDE_PATH}
+)
